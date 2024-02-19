@@ -17,6 +17,7 @@
 		519CF8802B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 519CF87F2B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf */; };
 		519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8822B83497D00D0C792 /* ContinueButton.swift */; };
 		519CF8892B83648600D0C792 /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8882B83648600D0C792 /* PhoneNumberVC.swift */; };
+		519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF88A2B8375EA00D0C792 /* CodeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		519CF87F2B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mulish-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		519CF8822B83497D00D0C792 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		519CF8882B83648600D0C792 /* PhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
+		519CF88A2B8375EA00D0C792 /* CodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				519CF8812B83495400D0C792 /* Helpers */,
 				519CF8692B82FF2F00D0C792 /* WelcomeVC.swift */,
 				519CF8882B83648600D0C792 /* PhoneNumberVC.swift */,
+				519CF88A2B8375EA00D0C792 /* CodeVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 				519CF8662B82FF2F00D0C792 /* AppDelegate.swift in Sources */,
 				519CF8892B83648600D0C792 /* PhoneNumberVC.swift in Sources */,
 				519CF8682B82FF2F00D0C792 /* SceneDelegate.swift in Sources */,
+				519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

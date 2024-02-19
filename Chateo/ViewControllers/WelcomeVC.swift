@@ -65,7 +65,7 @@ final class WelcomeVC: UIViewController {
     
     private func setupConstraints() {
         welcomeImageView.snp.makeConstraints { make in
-            make.width.equalToSuperview().multipliedBy(0.693)
+            make.height.equalTo(271)
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(50)
             make.centerX.equalToSuperview()
         }
@@ -80,7 +80,7 @@ final class WelcomeVC: UIViewController {
             make.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).offset(-25)
             make.centerX.equalToSuperview()
             make.width.equalToSuperview().multipliedBy(0.875)
-            make.height.equalTo(55)
+            make.height.equalTo(52)
         }
         
         termsLabel.snp.makeConstraints { make in
