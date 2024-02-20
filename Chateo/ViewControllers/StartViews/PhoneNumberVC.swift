@@ -86,6 +86,7 @@ final class PhoneNumberVC: UIViewController {
     // MARK: Setup UI
     private func setupUI() {
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
         view.addSubview(continueButton)
         view.addSubview(titleLabel)
         view.addSubview(descriptionLabel)

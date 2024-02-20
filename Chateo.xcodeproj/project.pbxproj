@@ -18,6 +18,10 @@
 		519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8822B83497D00D0C792 /* ContinueButton.swift */; };
 		519CF8892B83648600D0C792 /* PhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8882B83648600D0C792 /* PhoneNumberVC.swift */; };
 		519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF88A2B8375EA00D0C792 /* CodeVC.swift */; };
+		519CF88D2B84673D00D0C792 /* OneTimeCodeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF88C2B84673D00D0C792 /* OneTimeCodeTextField.swift */; };
+		519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF88E2B847E4600D0C792 /* YourProfileVC.swift */; };
+		519CF8922B848F9400D0C792 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8912B848F9400D0C792 /* TabBarController.swift */; };
+		519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8932B84ACC100D0C792 /* ContactsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		519CF8822B83497D00D0C792 /* ContinueButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueButton.swift; sourceTree = "<group>"; };
 		519CF8882B83648600D0C792 /* PhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneNumberVC.swift; sourceTree = "<group>"; };
 		519CF88A2B8375EA00D0C792 /* CodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeVC.swift; sourceTree = "<group>"; };
+		519CF88C2B84673D00D0C792 /* OneTimeCodeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneTimeCodeTextField.swift; sourceTree = "<group>"; };
+		519CF88E2B847E4600D0C792 /* YourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileVC.swift; sourceTree = "<group>"; };
+		519CF8912B848F9400D0C792 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		519CF8932B84ACC100D0C792 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +89,9 @@
 			isa = PBXGroup;
 			children = (
 				519CF8812B83495400D0C792 /* Helpers */,
-				519CF8692B82FF2F00D0C792 /* WelcomeVC.swift */,
-				519CF8882B83648600D0C792 /* PhoneNumberVC.swift */,
-				519CF88A2B8375EA00D0C792 /* CodeVC.swift */,
+				519CF8902B848F6000D0C792 /* StartViews */,
+				519CF8912B848F9400D0C792 /* TabBarController.swift */,
+				519CF8932B84ACC100D0C792 /* ContactsVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -92,8 +100,20 @@
 			isa = PBXGroup;
 			children = (
 				519CF8822B83497D00D0C792 /* ContinueButton.swift */,
+				519CF88C2B84673D00D0C792 /* OneTimeCodeTextField.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		519CF8902B848F6000D0C792 /* StartViews */ = {
+			isa = PBXGroup;
+			children = (
+				519CF8692B82FF2F00D0C792 /* WelcomeVC.swift */,
+				519CF8882B83648600D0C792 /* PhoneNumberVC.swift */,
+				519CF88A2B8375EA00D0C792 /* CodeVC.swift */,
+				519CF88E2B847E4600D0C792 /* YourProfileVC.swift */,
+			);
+			path = StartViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,11 +195,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */,
+				519CF88D2B84673D00D0C792 /* OneTimeCodeTextField.swift in Sources */,
 				519CF86A2B82FF2F00D0C792 /* WelcomeVC.swift in Sources */,
+				519CF8922B848F9400D0C792 /* TabBarController.swift in Sources */,
 				519CF8662B82FF2F00D0C792 /* AppDelegate.swift in Sources */,
 				519CF8892B83648600D0C792 /* PhoneNumberVC.swift in Sources */,
 				519CF8682B82FF2F00D0C792 /* SceneDelegate.swift in Sources */,
 				519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */,
+				519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */,
+				519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
