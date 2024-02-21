@@ -21,10 +21,6 @@ final class MoreVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.navigationItem.title = Self.title
-        tabBarController?.navigationController?.navigationBar.standardAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont(name: "MulishRoman-SemiBold", size: 18) ?? .systemFont(ofSize: 18)
-        ]
         tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
     }
     

@@ -29,17 +29,13 @@ final class ChatsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.navigationItem.title = Self.title
-        tabBarController?.navigationController?.navigationBar.standardAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.white,
-            .font: UIFont(name: "MulishRoman-SemiBold", size: 18) ?? .systemFont(ofSize: 18)
-        ]
         tabBarController?.navigationItem.rightBarButtonItems = createBarButtonItems()
     }
     
     //MARK: Setup UI
     private func setupUI() {
         tableView.dataSource = self
-        view.backgroundColor = .neutralActive
+        view.backgroundColor = .systemBackground
         view.addSubview(tableView)
         
         

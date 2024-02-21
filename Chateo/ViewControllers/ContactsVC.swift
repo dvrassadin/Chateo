@@ -30,10 +30,6 @@ final class ContactsVC: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tabBarController?.navigationItem.title = Self.title
-        tabBarController?.navigationController?.navigationBar.standardAppearance.titleTextAttributes = [
-            .foregroundColor: UIColor.black,
-            .font: UIFont(name: "MulishRoman-SemiBold", size: 18) ?? .systemFont(ofSize: 18)
-        ]
         tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
         
     }
@@ -54,15 +50,6 @@ final class ContactsVC: UITableViewController {
         else { return UITableViewCell() }
         
         cell.configure(user: contacts[indexPath.row])
-        
-//        let cell = UITableViewCell()
-//
-//        let contact = contacts[indexPath.row]
-//        var content = cell.defaultContentConfiguration()
-//        content.text = contact.name.formatted()
-//        content.secondaryText = contact.lastSeen
-//        content.image = contact.image
-//        cell.contentConfiguration = content
 
         return cell
     }

@@ -63,7 +63,7 @@ final class ContactTableViewCell: UITableViewCell {
         return view
     }()
     
-    private lazy var initialsLabel: UILabel = {
+    private let initialsLabel: UILabel = {
         let label = UILabel()
         label.clipsToBounds = true
         label.layer.cornerRadius = 16
@@ -107,7 +107,7 @@ final class ContactTableViewCell: UITableViewCell {
     func setupConstraints() {
         photoFrame.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
-            make.leading.equalToSuperview().offset(12)
+            make.leading.equalToSuperview().offset(20)
             make.width.equalTo(56)
             make.height.equalTo(photoFrame.snp.width)
         }
@@ -122,7 +122,8 @@ final class ContactTableViewCell: UITableViewCell {
         initialsLabel.snp.makeConstraints { $0.edges.equalTo(photoImageView) }
         
         textStackView.snp.makeConstraints { make in
-            make.leading.equalTo(photoImageView.snp.trailing).offset(12)
+            make.leading.equalTo(photoImageView.snp.trailing).offset(20)
+            make.trailing.equalToSuperview().offset(-20)
             make.centerY.equalToSuperview()
             make.height.greaterThanOrEqualTo(56)
             make.top.equalToSuperview().offset(10)
@@ -156,7 +157,7 @@ final class ContactTableViewCell: UITableViewCell {
     
     private func setGradientForPhotoFrame() {
         let shape = CAShapeLayer()
-        shape.lineWidth = 4
+        shape.lineWidth = 5
         shape.path = UIBezierPath(roundedRect: photoFrame.bounds, cornerRadius: 18).cgPath
         shape.strokeColor = UIColor.black.cgColor
         shape.fillColor = UIColor.clear.cgColor

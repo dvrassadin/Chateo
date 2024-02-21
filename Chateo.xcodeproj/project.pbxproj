@@ -27,7 +27,6 @@
 		51E3BDF92B84AE5600B79414 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF82B84AE5600B79414 /* User.swift */; };
 		51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDFD2B84CC2C00B79414 /* Message.swift */; };
 		51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */; };
-		51E3BE092B85EB9000B79414 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE082B85EB9000B79414 /* PhotoView.swift */; };
 		51E3BE0C2B85F30600B79414 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */; };
 /* End PBXBuildFile section */
 
@@ -52,7 +51,6 @@
 		51E3BDF82B84AE5600B79414 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		51E3BDFD2B84CC2C00B79414 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
-		51E3BE082B85EB9000B79414 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
 		51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,7 +117,6 @@
 			children = (
 				519CF8822B83497D00D0C792 /* ContinueButton.swift */,
 				519CF88C2B84673D00D0C792 /* OneTimeCodeTextField.swift */,
-				51E3BE082B85EB9000B79414 /* PhotoView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -255,7 +252,6 @@
 				51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */,
 				519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */,
 				51E3BDF52B84AD5400B79414 /* ChatsVC.swift in Sources */,
-				51E3BE092B85EB9000B79414 /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

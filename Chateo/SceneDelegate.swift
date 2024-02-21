@@ -28,6 +28,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             vertical: 0
         )
         window = UIWindow(windowScene: scene)
+        window?.backgroundColor = .systemBackground
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
