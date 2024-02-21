@@ -22,6 +22,13 @@
 		519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF88E2B847E4600D0C792 /* YourProfileVC.swift */; };
 		519CF8922B848F9400D0C792 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8912B848F9400D0C792 /* TabBarController.swift */; };
 		519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519CF8932B84ACC100D0C792 /* ContactsVC.swift */; };
+		51E3BDF52B84AD5400B79414 /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF42B84AD5400B79414 /* ChatsVC.swift */; };
+		51E3BDF72B84AD8700B79414 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF62B84AD8700B79414 /* MoreVC.swift */; };
+		51E3BDF92B84AE5600B79414 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF82B84AE5600B79414 /* User.swift */; };
+		51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDFD2B84CC2C00B79414 /* Message.swift */; };
+		51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */; };
+		51E3BE092B85EB9000B79414 /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE082B85EB9000B79414 /* PhotoView.swift */; };
+		51E3BE0C2B85F30600B79414 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +47,13 @@
 		519CF88E2B847E4600D0C792 /* YourProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfileVC.swift; sourceTree = "<group>"; };
 		519CF8912B848F9400D0C792 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		519CF8932B84ACC100D0C792 /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
+		51E3BDF42B84AD5400B79414 /* ChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsVC.swift; sourceTree = "<group>"; };
+		51E3BDF62B84AD8700B79414 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
+		51E3BDF82B84AE5600B79414 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		51E3BDFD2B84CC2C00B79414 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		51E3BE082B85EB9000B79414 /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +91,9 @@
 				519CF8652B82FF2F00D0C792 /* AppDelegate.swift */,
 				519CF8672B82FF2F00D0C792 /* SceneDelegate.swift */,
 				519CF8792B83207A00D0C792 /* ViewControllers */,
+				51E3BDFA2B84AE5C00B79414 /* Models */,
 				519CF86E2B82FF3000D0C792 /* Assets.xcassets */,
-				519CF87F2B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf */,
+				51E3BE0A2B85F19A00B79414 /* Fonts */,
 				519CF8702B82FF3000D0C792 /* LaunchScreen.storyboard */,
 				519CF8732B82FF3000D0C792 /* Info.plist */,
 			);
@@ -90,8 +105,11 @@
 			children = (
 				519CF8812B83495400D0C792 /* Helpers */,
 				519CF8902B848F6000D0C792 /* StartViews */,
+				51E3BE052B85BED300B79414 /* Cells */,
 				519CF8912B848F9400D0C792 /* TabBarController.swift */,
 				519CF8932B84ACC100D0C792 /* ContactsVC.swift */,
+				51E3BDF42B84AD5400B79414 /* ChatsVC.swift */,
+				51E3BDF62B84AD8700B79414 /* MoreVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -101,6 +119,7 @@
 			children = (
 				519CF8822B83497D00D0C792 /* ContinueButton.swift */,
 				519CF88C2B84673D00D0C792 /* OneTimeCodeTextField.swift */,
+				51E3BE082B85EB9000B79414 /* PhotoView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -114,6 +133,32 @@
 				519CF88E2B847E4600D0C792 /* YourProfileVC.swift */,
 			);
 			path = StartViews;
+			sourceTree = "<group>";
+		};
+		51E3BDFA2B84AE5C00B79414 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				51E3BDF82B84AE5600B79414 /* User.swift */,
+				51E3BDFD2B84CC2C00B79414 /* Message.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		51E3BE052B85BED300B79414 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		51E3BE0A2B85F19A00B79414 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */,
+				519CF87F2B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +229,7 @@
 				519CF8722B82FF3000D0C792 /* LaunchScreen.storyboard in Resources */,
 				519CF86F2B82FF3000D0C792 /* Assets.xcassets in Resources */,
 				519CF8802B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf in Resources */,
+				51E3BE0C2B85F30600B79414 /* Lato-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */,
+				51E3BDF92B84AE5600B79414 /* User.swift in Sources */,
 				519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */,
 				519CF88D2B84673D00D0C792 /* OneTimeCodeTextField.swift in Sources */,
 				519CF86A2B82FF2F00D0C792 /* WelcomeVC.swift in Sources */,
@@ -201,9 +249,13 @@
 				519CF8662B82FF2F00D0C792 /* AppDelegate.swift in Sources */,
 				519CF8892B83648600D0C792 /* PhoneNumberVC.swift in Sources */,
 				519CF8682B82FF2F00D0C792 /* SceneDelegate.swift in Sources */,
+				51E3BDF72B84AD8700B79414 /* MoreVC.swift in Sources */,
 				519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */,
 				519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */,
+				51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */,
 				519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */,
+				51E3BDF52B84AD5400B79414 /* ChatsVC.swift in Sources */,
+				51E3BE092B85EB9000B79414 /* PhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

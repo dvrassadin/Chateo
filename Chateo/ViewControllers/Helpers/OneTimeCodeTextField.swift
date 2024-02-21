@@ -49,7 +49,8 @@ final class OneTimeCodeTextField: UITextField {
         textContentType = .oneTimeCode
         addGestureRecognizer(tapGestureRecognizer)
         addSubview(labelsStackView)
-        setupConstraints()
+//        setupConstraints()
+        labelsStackView.snp.makeConstraints { $0.edges.equalToSuperview() }
         addTarget(self, action: #selector(textChanging), for: .editingChanged)
     }
     

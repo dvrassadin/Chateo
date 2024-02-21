@@ -21,7 +21,9 @@ final class CodeVC: UIViewController {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = String(localized: "We have sent you an SMS with the code to +62 1309 - 1710 - 1920")
+        label.text = String(
+            localized: "We have sent you an SMS with the code to +62 1309 - 1710 - 1920"
+        )
         label.textAlignment = .center
         label.font = UIFont(name: "MulishRoman-Regular", size: 14)
         label.textColor = .neutralActive

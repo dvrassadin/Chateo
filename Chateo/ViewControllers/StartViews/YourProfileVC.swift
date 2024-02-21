@@ -23,7 +23,7 @@ final class YourProfileVC: UIViewController {
         contentType: .givenName
     )
     private lazy var lastNameTextField = createTextField(
-        placeholder: String(localized: "First Name (Required)"),
+        placeholder: String(localized: "Last Name (Required)"),
         contentType: .familyName
     )
     private let saveButton = ContinueButton(title: String(localized: "Save"))
@@ -44,7 +44,6 @@ final class YourProfileVC: UIViewController {
     private func setupUI() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.topItem?.backButtonDisplayMode = .minimal
-        
         title = String(localized: "Your Profile")
         view.addSubview(avatarImageView)
         avatarImageView.addSubview(changeAvatarButton)

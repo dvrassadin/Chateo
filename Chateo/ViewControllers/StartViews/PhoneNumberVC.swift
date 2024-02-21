@@ -22,7 +22,9 @@ final class PhoneNumberVC: UIViewController {
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
-        label.text = String(localized: "Please confirm your country code and enter your phone number")
+        label.text = String(
+            localized: "Please confirm your country code and enter your phone number"
+        )
         label.textAlignment = .center
         label.font = UIFont(name: "MulishRoman-Regular", size: 14)
         label.textColor = .neutralActive
