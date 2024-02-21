@@ -21,30 +21,33 @@ final class TabBarController: UITabBarController {
         navigationItem.hidesBackButton = true
         tabBar.isTranslucent = false
         tabBar.tintColor = .neutralActive
+        tabBar.items?.forEach { item in
+            item.imageInsets = .init(top: 12, left: 0, bottom: -12, right: 0)
+        }
     }
     
     private func setupTabBar() {
         let contactsVS = ContactsVC()
         let contactsTabBarItem = UITabBarItem(
             title: nil,
-            image: UIImage(named: "Contacts"),
-            selectedImage: UIImage(named: "ContactsSelected")
+            image: UIImage.contacts,
+            selectedImage: UIImage.contactsSelected
         )
         contactsVS.tabBarItem = contactsTabBarItem
         
         let chatsVC = ChatsVC()
         let chatsTabBarItem = UITabBarItem(
             title: nil,
-            image: UIImage(named: "Chats"),
-            selectedImage: UIImage(named: "ChatsSelected")
+            image: UIImage.chats,
+            selectedImage: UIImage.chatsSelected
         )
         chatsVC.tabBarItem = chatsTabBarItem
         
         let moreVC = MoreVC()
         let moreTabBarItem = UITabBarItem(
             title: nil,
-            image: UIImage(named: "More"),
-            selectedImage: UIImage(named: "MoreSelected")
+            image: UIImage.more,
+            selectedImage: UIImage.moreSelected
         )
         moreVC.tabBarItem = moreTabBarItem
         

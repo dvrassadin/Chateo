@@ -15,7 +15,7 @@ final class YourProfileVC: UIViewController {
     private let changeAvatarButton: UIButton = {
         let button = UIButton()
         button.configuration = .plain()
-        button.configuration?.image = UIImage(named: "PlusIcon")
+        button.configuration?.image = UIImage.plusIcon
         return button
     }()
     private lazy var firstNameTextField = createTextField(

@@ -47,7 +47,7 @@ final class PhoneNumberVC: UIViewController {
         button.configuration?.attributedTitle = attributedTitle
         button.configuration?.background.backgroundColor = .neutralSecondaryBG
         button.configuration?.baseForegroundColor = .neutralDisable
-        button.configuration?.image = UIImage(named: "Indonesia")
+        button.configuration?.image = UIImage.indonesia
         button.setContentHuggingPriority(.defaultHigh, for: .horizontal)
         return button
     }()

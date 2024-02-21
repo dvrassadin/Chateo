@@ -11,7 +11,7 @@ import SnapKit
 final class WelcomeVC: UIViewController {
     // MARK: UI components
     private let welcomeImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "Illustration"))
+        let imageView = UIImageView(image: UIImage.illustration)
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()

@@ -25,7 +25,7 @@ final class OneTimeCodeTextField: UITextField {
     weak var checkCodeDelegate: OneTimeCodeTextFieldDelegate?
     private let defaultSymbol: NSAttributedString = {
         let attachment = NSTextAttachment()
-        attachment.image = UIImage(named: "Circle")
+        attachment.image = UIImage.circle
         return NSAttributedString(attachment: attachment)
     }()
     

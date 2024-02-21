@@ -47,10 +47,10 @@ final class ChatsVC: UIViewController {
     
     private func createBarButtonItems() -> [UIBarButtonItem] {
         let newChatButtonItem = UIBarButtonItem(
-            customView: UIImageView(image: UIImage(named: "NewChat"))
+            customView: UIImageView(image: UIImage.newChat)
         )
         let readBarButtonItem = UIBarButtonItem(
-            customView: UIImageView(image: UIImage(named: "ReadIcon"))
+            customView: UIImageView(image: UIImage.readIcon)
         )
         return [readBarButtonItem, newChatButtonItem]
     }

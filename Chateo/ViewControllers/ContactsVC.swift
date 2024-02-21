@@ -11,11 +11,18 @@ final class ContactsVC: UITableViewController {
     
     // MARK: Properties
     static let title = String(localized: "Contacts")
+    
+    //MARK: UI components
     private let contacts = User.users
-//    private let searchBar: UISearchBar = {
-//        let searchBar = UISearchBar()
-//        return searchBar
-//    }()
+    private let searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search"
+        searchBar.searchTextField.font = UIFont(name: "MulishRoman-SemiBold", size: 14)
+        searchBar.backgroundColor = .neutralSecondaryBG
+        searchBar.setImage(UIImage.search, for: .search, state: .normal)
+        return searchBar
+    }()
 
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -92,6 +99,7 @@ final class ContactsVC: UITableViewController {
     // MARK: SetupUI
     private func setupUI() {
         view.backgroundColor = .systemBackground
+        tableView.tableHeaderView = searchBar
     }
 
 }

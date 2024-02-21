@@ -28,6 +28,7 @@
 		51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDFD2B84CC2C00B79414 /* Message.swift */; };
 		51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */; };
 		51E3BE0C2B85F30600B79414 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */; };
+		51E3BE2E2B863A6600B79414 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE2D2B863A6600B79414 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		51E3BDFD2B84CC2C00B79414 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		51E3BE2D2B863A6600B79414 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 		519CF8592B82FF2F00D0C792 = {
 			isa = PBXGroup;
 			children = (
+				51E3BE2D2B863A6600B79414 /* .gitignore */,
 				519CF8642B82FF2F00D0C792 /* Chateo */,
 				519CF8632B82FF2F00D0C792 /* Products */,
 			);
@@ -223,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E3BE2E2B863A6600B79414 /* .gitignore in Resources */,
 				519CF8722B82FF3000D0C792 /* LaunchScreen.storyboard in Resources */,
 				519CF86F2B82FF3000D0C792 /* Assets.xcassets in Resources */,
 				519CF8802B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf in Resources */,
