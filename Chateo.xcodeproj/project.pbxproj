@@ -29,6 +29,10 @@
 		51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */; };
 		51E3BE0C2B85F30600B79414 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */; };
 		51E3BE2E2B863A6600B79414 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE2D2B863A6600B79414 /* .gitignore */; };
+		51E3BE312B863F1700B79414 /* CellTextStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE302B863F1700B79414 /* CellTextStackView.swift */; };
+		51E3BE332B86457800B79414 /* CellPhotoFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE322B86457800B79414 /* CellPhotoFrame.swift */; };
+		51E3BE372B86EAFE00B79414 /* CellPhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE362B86EAFE00B79414 /* CellPhotoImageView.swift */; };
+		51E3BE392B86EF3D00B79414 /* CellIsOnlineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,10 @@
 		51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		51E3BE2D2B863A6600B79414 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		51E3BE302B863F1700B79414 /* CellTextStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellTextStackView.swift; sourceTree = "<group>"; };
+		51E3BE322B86457800B79414 /* CellPhotoFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhotoFrame.swift; sourceTree = "<group>"; };
+		51E3BE362B86EAFE00B79414 /* CellPhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhotoImageView.swift; sourceTree = "<group>"; };
+		51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIsOnlineIndicator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +155,7 @@
 		51E3BE052B85BED300B79414 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				51E3BE2F2B863B6C00B79414 /* Helpers */,
 				51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */,
 			);
 			path = Cells;
@@ -159,6 +168,17 @@
 				519CF87F2B8339FD00D0C792 /* Mulish-VariableFont_wght.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		51E3BE2F2B863B6C00B79414 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				51E3BE302B863F1700B79414 /* CellTextStackView.swift */,
+				51E3BE322B86457800B79414 /* CellPhotoFrame.swift */,
+				51E3BE362B86EAFE00B79414 /* CellPhotoImageView.swift */,
+				51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,14 +264,18 @@
 				51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */,
 				51E3BDF92B84AE5600B79414 /* User.swift in Sources */,
 				519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */,
+				51E3BE332B86457800B79414 /* CellPhotoFrame.swift in Sources */,
 				519CF88D2B84673D00D0C792 /* OneTimeCodeTextField.swift in Sources */,
 				519CF86A2B82FF2F00D0C792 /* WelcomeVC.swift in Sources */,
 				519CF8922B848F9400D0C792 /* TabBarController.swift in Sources */,
+				51E3BE392B86EF3D00B79414 /* CellIsOnlineIndicator.swift in Sources */,
 				519CF8662B82FF2F00D0C792 /* AppDelegate.swift in Sources */,
 				519CF8892B83648600D0C792 /* PhoneNumberVC.swift in Sources */,
+				51E3BE312B863F1700B79414 /* CellTextStackView.swift in Sources */,
 				519CF8682B82FF2F00D0C792 /* SceneDelegate.swift in Sources */,
 				51E3BDF72B84AD8700B79414 /* MoreVC.swift in Sources */,
 				519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */,
+				51E3BE372B86EAFE00B79414 /* CellPhotoImageView.swift in Sources */,
 				519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */,
 				51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */,
 				519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */,

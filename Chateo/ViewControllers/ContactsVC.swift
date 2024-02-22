@@ -99,7 +99,7 @@ final class ContactsVC: UITableViewController {
     // MARK: SetupUI
     private func setupUI() {
         view.backgroundColor = .systemBackground
-        tableView.tableHeaderView = searchBar
+//        tableView.tableHeaderView = searchBar
     }
 
 }

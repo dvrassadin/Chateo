@@ -14,67 +14,21 @@ final class ContactTableViewCell: UITableViewCell {
     static var identifier: String = "ContactTableViewCell"
     
     // MARK: UI components
-    private let photoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.clipsToBounds = true
-        imageView.layer.cornerRadius = 16
-        imageView.contentMode = .scaleAspectFill
-        return imageView
-    }()
+    private let photoImageView = CellPhotoImageView()
+    private let photoFrame = CellPhotoFrame()
+    private let textStackView = CellTextStackView()
+    private let isOnlineIndicator = CellIsOnlineIndicator()
     
-    private let textStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        return stackView
-    }()
-    
-    private let nameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "MulishRoman-SemiBold", size: 14)
-        label.textColor = .neutralActive
-        label.setContentHuggingPriority(.defaultHigh, for: .vertical)
-        return label
-    }()
-    
-    private let descriptionLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "MulishRoman-Regular", size: 12)
-        label.textColor = .neutralDisable
-        label.setContentHuggingPriority(.defaultLow, for: .vertical)
-        return label
-    }()
-    
-    private let isOnlineLabel: UIView = {
-        let view = UIView()
-        view.backgroundColor = .accentSuccess
-        view.layer.cornerRadius = 6
-        view.clipsToBounds = true
-        view.layer.borderColor = UIColor.white.cgColor
-        view.layer.borderWidth = 2.5
-        view.isHidden = true
-        return view
-    }()
-    
-    private let photoFrame: UIView = {
-        let view = UIView()
-        view.clipsToBounds = true
-        view.layer.cornerRadius = 18
-        view.isHidden = true
-        return view
-    }()
-    
-    private let initialsLabel: UILabel = {
-        let label = UILabel()
-        label.clipsToBounds = true
-        label.layer.cornerRadius = 16
-        label.backgroundColor = .initialsLabel
-        label.textAlignment = .center
-        label.font = UIFont(name: "Lato-Bold", size: 14)
-        label.textColor = .white
-        label.isHidden = true
-        return label
-    }()
-    
+//    private let isOnlineLabel: UIView = {
+//        let view = UIView()
+//        view.backgroundColor = .accentSuccess
+//        view.layer.cornerRadius = 6
+//        view.clipsToBounds = true
+//        view.layer.borderColor = UIColor.white.cgColor
+//        view.layer.borderWidth = 2.5
+//        view.isHidden = true
+//        return view
+//    }()
     
     // MARK: Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -87,24 +41,16 @@ final class ContactTableViewCell: UITableViewCell {
         setupUI()
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        setGradientForPhotoFrame()
-    }
-    
     // MARK: Setup UI
     func setupUI() {
         contentView.addSubview(photoFrame)
         contentView.addSubview(photoImageView)
-        contentView.addSubview(initialsLabel)
-        contentView.addSubview(isOnlineLabel)
-        textStackView.addArrangedSubview(nameLabel)
-        textStackView.addArrangedSubview(descriptionLabel)
+        contentView.addSubview(isOnlineIndicator)
         contentView.addSubview(textStackView)
         setupConstraints()
     }
     
-    func setupConstraints() {
+    private func setupConstraints() {
         photoFrame.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
@@ -119,8 +65,6 @@ final class ContactTableViewCell: UITableViewCell {
             make.height.equalTo(48)
         }
         
-        initialsLabel.snp.makeConstraints { $0.edges.equalTo(photoImageView) }
-        
         textStackView.snp.makeConstraints { make in
             make.leading.equalTo(photoImageView.snp.trailing).offset(20)
             make.trailing.equalToSuperview().offset(-20)
@@ -130,9 +74,9 @@ final class ContactTableViewCell: UITableViewCell {
             make.bottom.equalToSuperview().offset(-10)
         }
         
-        isOnlineLabel.snp.makeConstraints { make in
+        isOnlineIndicator.snp.makeConstraints { make in
             make.width.equalTo(14)
-            make.height.equalTo(isOnlineLabel.snp.width)
+            make.height.equalTo(isOnlineIndicator.snp.width)
             make.centerX.equalTo(photoImageView.snp.trailing).offset(-4)
             make.centerY.equalTo(photoImageView.snp.top).offset(4)
         }
@@ -142,43 +86,20 @@ final class ContactTableViewCell: UITableViewCell {
         if let photo = user.photo {
             photoImageView.image = photo
         } else {
-            setInitials(name: user.name)
+            photoImageView.setInitials(user.name)
         }
-        nameLabel.text = user.name.formatted()
-        descriptionLabel.text = user.lastSeen
-        if user.isOnline { isOnlineLabel.isHidden = false }
+        textStackView.main = user.name.formatted()
+        textStackView.secondary = user.lastSeen
+        if user.isOnline { isOnlineIndicator.isHidden = false }
         if user.hasUnread { photoFrame.isHidden = false }
-    }
-    
-    private func setInitials(name: PersonNameComponents) {
-        initialsLabel.text = name.formatted(.name(style: .abbreviated))
-        initialsLabel.isHidden = false
-    }
-    
-    private func setGradientForPhotoFrame() {
-        let shape = CAShapeLayer()
-        shape.lineWidth = 5
-        shape.path = UIBezierPath(roundedRect: photoFrame.bounds, cornerRadius: 18).cgPath
-        shape.strokeColor = UIColor.black.cgColor
-        shape.fillColor = UIColor.clear.cgColor
-        
-        let gradient = CAGradientLayer()
-        gradient.frame =  CGRect(origin: CGPoint.zero, size: photoFrame.frame.size)
-        gradient.colors = [UIColor.firstGradientFirst.cgColor, UIColor.firstGradientSecond.cgColor]
-        gradient.mask = shape
-        gradient.startPoint = CGPoint(x: 0, y: 0.5)
-        gradient.endPoint = CGPoint(x: 1, y: 0.5)
-        
-        photoFrame.layer.addSublayer(gradient)
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        photoImageView.image = nil
-        nameLabel.text = nil
-        descriptionLabel.text = nil
-        isOnlineLabel.isHidden = true
+        photoImageView.prepareForReuse()
+        textStackView.main = nil
+        textStackView.secondary = nil
+        isOnlineIndicator.isHidden = true
         photoFrame.isHidden = true
-        initialsLabel.isHidden = true
     }
 }
