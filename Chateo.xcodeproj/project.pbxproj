@@ -25,7 +25,7 @@
 		51E3BDF52B84AD5400B79414 /* ChatsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF42B84AD5400B79414 /* ChatsVC.swift */; };
 		51E3BDF72B84AD8700B79414 /* MoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF62B84AD8700B79414 /* MoreVC.swift */; };
 		51E3BDF92B84AE5600B79414 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDF82B84AE5600B79414 /* User.swift */; };
-		51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDFD2B84CC2C00B79414 /* Message.swift */; };
+		51E3BDFE2B84CC2C00B79414 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BDFD2B84CC2C00B79414 /* Chat.swift */; };
 		51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */; };
 		51E3BE0C2B85F30600B79414 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */; };
 		51E3BE2E2B863A6600B79414 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 51E3BE2D2B863A6600B79414 /* .gitignore */; };
@@ -33,6 +33,8 @@
 		51E3BE332B86457800B79414 /* CellPhotoFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE322B86457800B79414 /* CellPhotoFrame.swift */; };
 		51E3BE372B86EAFE00B79414 /* CellPhotoImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE362B86EAFE00B79414 /* CellPhotoImageView.swift */; };
 		51E3BE392B86EF3D00B79414 /* CellIsOnlineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */; };
+		51E3BE3B2B8709FA00B79414 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3A2B8709FA00B79414 /* ChatsTableViewCell.swift */; };
+		51E3BE3D2B870B0100B79414 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +56,7 @@
 		51E3BDF42B84AD5400B79414 /* ChatsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsVC.swift; sourceTree = "<group>"; };
 		51E3BDF62B84AD8700B79414 /* MoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreVC.swift; sourceTree = "<group>"; };
 		51E3BDF82B84AE5600B79414 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		51E3BDFD2B84CC2C00B79414 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		51E3BDFD2B84CC2C00B79414 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
 		51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
 		51E3BE0B2B85F1E100B79414 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		51E3BE2D2B863A6600B79414 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
@@ -62,6 +64,8 @@
 		51E3BE322B86457800B79414 /* CellPhotoFrame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhotoFrame.swift; sourceTree = "<group>"; };
 		51E3BE362B86EAFE00B79414 /* CellPhotoImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPhotoImageView.swift; sourceTree = "<group>"; };
 		51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIsOnlineIndicator.swift; sourceTree = "<group>"; };
+		51E3BE3A2B8709FA00B79414 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
+		51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +132,7 @@
 			children = (
 				519CF8822B83497D00D0C792 /* ContinueButton.swift */,
 				519CF88C2B84673D00D0C792 /* OneTimeCodeTextField.swift */,
+				51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -147,7 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				51E3BDF82B84AE5600B79414 /* User.swift */,
-				51E3BDFD2B84CC2C00B79414 /* Message.swift */,
+				51E3BDFD2B84CC2C00B79414 /* Chat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			children = (
 				51E3BE2F2B863B6C00B79414 /* Helpers */,
 				51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */,
+				51E3BE3A2B8709FA00B79414 /* ChatsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */,
+				51E3BE3B2B8709FA00B79414 /* ChatsTableViewCell.swift in Sources */,
 				51E3BDF92B84AE5600B79414 /* User.swift in Sources */,
 				519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */,
 				51E3BE332B86457800B79414 /* CellPhotoFrame.swift in Sources */,
@@ -274,10 +281,11 @@
 				51E3BE312B863F1700B79414 /* CellTextStackView.swift in Sources */,
 				519CF8682B82FF2F00D0C792 /* SceneDelegate.swift in Sources */,
 				51E3BDF72B84AD8700B79414 /* MoreVC.swift in Sources */,
+				51E3BE3D2B870B0100B79414 /* CustomSearchBar.swift in Sources */,
 				519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */,
 				51E3BE372B86EAFE00B79414 /* CellPhotoImageView.swift in Sources */,
 				519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */,
-				51E3BDFE2B84CC2C00B79414 /* Message.swift in Sources */,
+				51E3BDFE2B84CC2C00B79414 /* Chat.swift in Sources */,
 				519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */,
 				51E3BDF52B84AD5400B79414 /* ChatsVC.swift in Sources */,
 			);

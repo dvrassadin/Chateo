@@ -16,13 +16,20 @@ final class ChatsVC: UIViewController {
     
     // MARK: Properties
     static let title = String(localized: "Chats")
+    private let chats = Chat.example
     
     // MARK: UI components
     private let tableView = UITableView()
+    private let searchBar = CustomSearchBar()
 
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        tableView.register(
+            ChatsTableViewCell.self,
+            forCellReuseIdentifier: ChatsTableViewCell.identifier
+        )
         setupUI()
     }
     
@@ -34,15 +41,26 @@ final class ChatsVC: UIViewController {
     
     //MARK: Setup UI
     private func setupUI() {
-        tableView.dataSource = self
         view.backgroundColor = .systemBackground
+        view.addSubview(searchBar)
         view.addSubview(tableView)
-        
-        
+        setupConstraints()
     }
     
     private func setupConstraints() {
-        tableView.snp.makeConstraints { $0.edges.equalToSuperview() }
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.height.greaterThanOrEqualTo(36)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom).offset(12)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
     }
     
     private func createBarButtonItems() -> [UIBarButtonItem] {
@@ -59,10 +77,18 @@ final class ChatsVC: UIViewController {
 // MARK: - UITableViewDataSource
 extension ChatsVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        chats.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: ChatsTableViewCell.identifier,
+            for: indexPath
+        ) as? ChatsTableViewCell
+        else { return UITableViewCell() }
+        
+        cell.configure(chat: chats[indexPath.row])
+        
+        return cell
     }
 }

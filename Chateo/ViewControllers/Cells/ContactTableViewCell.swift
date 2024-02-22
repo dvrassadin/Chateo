@@ -19,17 +19,6 @@ final class ContactTableViewCell: UITableViewCell {
     private let textStackView = CellTextStackView()
     private let isOnlineIndicator = CellIsOnlineIndicator()
     
-//    private let isOnlineLabel: UIView = {
-//        let view = UIView()
-//        view.backgroundColor = .accentSuccess
-//        view.layer.cornerRadius = 6
-//        view.clipsToBounds = true
-//        view.layer.borderColor = UIColor.white.cgColor
-//        view.layer.borderWidth = 2.5
-//        view.isHidden = true
-//        return view
-//    }()
-    
     // MARK: Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

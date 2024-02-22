@@ -7,31 +7,25 @@
 
 import UIKit
 
-final class ContactsVC: UITableViewController {
+final class ContactsVC: UIViewController {
     
     // MARK: Properties
     static let title = String(localized: "Contacts")
+    private let contacts = User.users
     
     //MARK: UI components
-    private let contacts = User.users
-    private let searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.sizeToFit()
-        searchBar.placeholder = "Search"
-        searchBar.searchTextField.font = UIFont(name: "MulishRoman-SemiBold", size: 14)
-        searchBar.backgroundColor = .neutralSecondaryBG
-        searchBar.setImage(UIImage.search, for: .search, state: .normal)
-        return searchBar
-    }()
-
+    private let tableView = UITableView()
+    private let searchBar = CustomSearchBar()
+    
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        tableView.dataSource = self
         tableView.register(
             ContactTableViewCell.self,
             forCellReuseIdentifier: ContactTableViewCell.identifier
         )
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,16 +34,39 @@ final class ContactsVC: UITableViewController {
         tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
         
     }
+    
+    // MARK: SetupUI
+    private func setupUI() {
+        view.backgroundColor = .systemBackground
+        view.addSubview(searchBar)
+        view.addSubview(tableView)
+        setupConstrains()
+    }
+    
+    private func setupConstrains() {
+        searchBar.snp.makeConstraints { make in
+            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
+            make.leading.equalToSuperview().offset(20)
+            make.trailing.equalToSuperview().offset(-20)
+            make.height.greaterThanOrEqualTo(36)
+        }
+        
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(searchBar.snp.bottom).offset(12)
+            make.leading.equalToSuperview()
+            make.trailing.equalToSuperview()
+            make.bottom.equalToSuperview()
+        }
+    }
+}
 
-    // MARK: Table view data source
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: - UITableViewDataSource
+extension ContactsVC: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         contacts.count
     }
-
-    override func tableView(
-        _ tableView: UITableView,
-        cellForRowAt indexPath: IndexPath
-    ) -> UITableViewCell {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(
             withIdentifier: ContactTableViewCell.identifier,
             for: indexPath
@@ -57,49 +74,7 @@ final class ContactsVC: UITableViewController {
         else { return UITableViewCell() }
         
         cell.configure(user: contacts[indexPath.row])
-
+        
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-    
-    // MARK: SetupUI
-    private func setupUI() {
-        view.backgroundColor = .systemBackground
-//        tableView.tableHeaderView = searchBar
-    }
-
 }
