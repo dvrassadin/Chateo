@@ -35,6 +35,8 @@
 		51E3BE392B86EF3D00B79414 /* CellIsOnlineIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */; };
 		51E3BE3B2B8709FA00B79414 /* ChatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3A2B8709FA00B79414 /* ChatsTableViewCell.swift */; };
 		51E3BE3D2B870B0100B79414 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */; };
+		51E3BE3F2B87252500B79414 /* StoriesFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3E2B87252500B79414 /* StoriesFeedTableViewCell.swift */; };
+		51E3BE412B8726C500B79414 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE402B8726C500B79414 /* StoriesCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIsOnlineIndicator.swift; sourceTree = "<group>"; };
 		51E3BE3A2B8709FA00B79414 /* ChatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableViewCell.swift; sourceTree = "<group>"; };
 		51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
+		51E3BE3E2B87252500B79414 /* StoriesFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesFeedTableViewCell.swift; sourceTree = "<group>"; };
+		51E3BE402B8726C500B79414 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				51E3BE2F2B863B6C00B79414 /* Helpers */,
 				51E3BE012B84EB1400B79414 /* ContactTableViewCell.swift */,
 				51E3BE3A2B8709FA00B79414 /* ChatsTableViewCell.swift */,
+				51E3BE3E2B87252500B79414 /* StoriesFeedTableViewCell.swift */,
+				51E3BE402B8726C500B79414 /* StoriesCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -270,6 +276,7 @@
 				51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */,
 				51E3BE3B2B8709FA00B79414 /* ChatsTableViewCell.swift in Sources */,
 				51E3BDF92B84AE5600B79414 /* User.swift in Sources */,
+				51E3BE412B8726C500B79414 /* StoriesCollectionViewCell.swift in Sources */,
 				519CF8832B83497D00D0C792 /* ContinueButton.swift in Sources */,
 				51E3BE332B86457800B79414 /* CellPhotoFrame.swift in Sources */,
 				519CF88D2B84673D00D0C792 /* OneTimeCodeTextField.swift in Sources */,
@@ -284,6 +291,7 @@
 				51E3BE3D2B870B0100B79414 /* CustomSearchBar.swift in Sources */,
 				519CF88B2B8375EA00D0C792 /* CodeVC.swift in Sources */,
 				51E3BE372B86EAFE00B79414 /* CellPhotoImageView.swift in Sources */,
+				51E3BE3F2B87252500B79414 /* StoriesFeedTableViewCell.swift in Sources */,
 				519CF88F2B847E4600D0C792 /* YourProfileVC.swift in Sources */,
 				51E3BDFE2B84CC2C00B79414 /* Chat.swift in Sources */,
 				519CF8942B84ACC100D0C792 /* ContactsVC.swift in Sources */,

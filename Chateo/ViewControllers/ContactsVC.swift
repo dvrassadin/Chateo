@@ -38,24 +38,28 @@ final class ContactsVC: UIViewController {
     // MARK: SetupUI
     private func setupUI() {
         view.backgroundColor = .systemBackground
-        view.addSubview(searchBar)
+//        view.addSubview(searchBar)
         view.addSubview(tableView)
+        tableView.tableHeaderView = searchBar
         setupConstrains()
     }
     
     private func setupConstrains() {
-        searchBar.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
-            make.leading.equalToSuperview().offset(20)
-            make.trailing.equalToSuperview().offset(-20)
-            make.height.greaterThanOrEqualTo(36)
-        }
-        
+//        searchBar.snp.makeConstraints { make in
+//            make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(12)
+//            make.leading.equalToSuperview().offset(20)
+//            make.trailing.equalToSuperview().offset(-20)
+//            make.height.greaterThanOrEqualTo(36)
+//        }
+//        
+//        tableView.snp.makeConstraints { make in
+//            make.top.equalTo(searchBar.snp.bottom).offset(12)
+//            make.leading.equalToSuperview()
+//            make.trailing.equalToSuperview()
+//            make.bottom.equalToSuperview()
+//        }
         tableView.snp.makeConstraints { make in
-            make.top.equalTo(searchBar.snp.bottom).offset(12)
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.edges.equalToSuperview()
         }
     }
 }

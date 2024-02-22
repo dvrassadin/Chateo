@@ -99,8 +99,9 @@ final class ChatsTableViewCell: UITableViewCell {
         photoImageView.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(28)
-            make.width.equalTo(48)
-            make.height.equalTo(48)
+//            make.width.equalTo(48)
+//            make.height.equalTo(48)
+            make.size.equalTo(48)
         }
         
         mainStackView.snp.makeConstraints { make in
@@ -113,8 +114,9 @@ final class ChatsTableViewCell: UITableViewCell {
         }
         
         isOnlineIndicator.snp.makeConstraints { make in
-            make.width.equalTo(14)
-            make.height.equalTo(isOnlineIndicator.snp.width)
+//            make.width.equalTo(14)
+//            make.height.equalTo(isOnlineIndicator.snp.width)
+            make.size.equalTo(14)
             make.centerX.equalTo(photoImageView.snp.trailing).offset(-4)
             make.centerY.equalTo(photoImageView.snp.top).offset(4)
         }
