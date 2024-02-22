@@ -12,22 +12,24 @@ final class YourProfileVC: UIViewController {
 
     // MARK: UI components
     private let avatarImageView = UIImageView(image: UIImage(named: "Avatar"))
+    private let saveButton = ContinueButton(title: String(localized: "Save"))
+    
     private let changeAvatarButton: UIButton = {
         let button = UIButton()
         button.configuration = .plain()
         button.configuration?.image = UIImage.plusIcon
         return button
     }()
+    
     private lazy var firstNameTextField = createTextField(
         placeholder: String(localized: "First Name (Required)"),
         contentType: .givenName
     )
+    
     private lazy var lastNameTextField = createTextField(
         placeholder: String(localized: "Last Name (Required)"),
         contentType: .familyName
     )
-    private let saveButton = ContinueButton(title: String(localized: "Save"))
-    
     
     // MARK: Lifecycle
     override func viewDidLoad() {
@@ -62,8 +64,7 @@ final class YourProfileVC: UIViewController {
         avatarImageView.snp.makeConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(60)
             make.centerX.equalToSuperview()
-            make.width.equalTo(100)
-            make.height.equalTo(avatarImageView.snp.width)
+            make.size.equalTo(100)
         }
         
         changeAvatarButton.snp.makeConstraints { make in

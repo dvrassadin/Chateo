@@ -49,7 +49,6 @@ final class OneTimeCodeTextField: UITextField {
         textContentType = .oneTimeCode
         addGestureRecognizer(tapGestureRecognizer)
         addSubview(labelsStackView)
-//        setupConstraints()
         labelsStackView.snp.makeConstraints { $0.edges.equalToSuperview() }
         addTarget(self, action: #selector(textChanging), for: .editingChanged)
     }
@@ -68,15 +67,6 @@ final class OneTimeCodeTextField: UITextField {
             label.isUserInteractionEnabled = true
             labelsStackView.addArrangedSubview(label)
             digitLabels.append(label)
-        }
-    }
-    
-    private func setupConstraints() {
-        labelsStackView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.bottom.equalToSuperview()
         }
     }
     

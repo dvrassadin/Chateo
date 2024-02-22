@@ -13,7 +13,6 @@ final class CustomSearchBar: UISearchBar {
     override init(frame: CGRect = CGRect()) {
         super.init(frame: frame)
         setupUI()
-        
     }
     
     required init?(coder: NSCoder) {
@@ -25,7 +24,7 @@ final class CustomSearchBar: UISearchBar {
     private func setupUI() {
         sizeToFit()
         searchBarStyle = .minimal
-        placeholder = "Search"
+        placeholder = String(localized: "Search")
         searchTextField.font = UIFont(name: "MulishRoman-SemiBold", size: 14)
         searchTextField.backgroundColor = .neutralSecondaryBG
         setImage(UIImage.search, for: .search, state: .normal)

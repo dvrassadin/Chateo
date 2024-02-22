@@ -17,8 +17,7 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         options connectionOptions: UIScene.ConnectionOptions
     ) {
         guard let scene = (scene as? UIWindowScene) else { return }
-//        let navigationController = UINavigationController(rootViewController: WelcomeVC())
-        let navigationController = UINavigationController(rootViewController: TabBarController())
+        let navigationController = UINavigationController(rootViewController: WelcomeVC())
         navigationController.navigationBar.tintColor = .black
         navigationController.navigationBar.standardAppearance.titleTextAttributes = [
             .font: UIFont(name: "MulishRoman-SemiBold", size: 18) ?? .systemFont(ofSize: 18)

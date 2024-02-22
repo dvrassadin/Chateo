@@ -21,23 +21,31 @@ final class StoriesFeedTableViewCell: UITableViewCell {
     // MARK: Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupUI()
+        initialize()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupUI()
+        initialize()
     }
     
-    // MARK: Setup UI
-    private func setupUI() {
+    private func initialize() {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(
             StoriesCollectionViewCell.self,
             forCellWithReuseIdentifier: StoriesCollectionViewCell.identifier
         )
+        collectionView.register(
+            AddStoryCollectionViewCell.self,
+            forCellWithReuseIdentifier: AddStoryCollectionViewCell.identifier
+        )
         collectionView.showsHorizontalScrollIndicator = false
+        setupUI()
+    }
+    
+    // MARK: Setup UI
+    private func setupUI() {
         contentView.addSubview(collectionView)
         setupConstraints()
         collectionView.reloadData()
@@ -47,32 +55,53 @@ final class StoriesFeedTableViewCell: UITableViewCell {
         collectionView.snp.makeConstraints { make in
             make.height.greaterThanOrEqualTo(108)
             make.verticalEdges.equalToSuperview()
-            make.leading.equalToSuperview().offset(20)
+            make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
     }
-    
 }
 
 // MARK: - UICollectionViewDataSource
 extension StoriesFeedTableViewCell: UICollectionViewDataSource {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        2
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        stories.count
+        switch section {
+        case 0: return 1
+        case 1: return stories.count
+        default: return 0
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: StoriesCollectionViewCell.identifier,
-            for: indexPath
-        ) as? StoriesCollectionViewCell else { return UICollectionViewCell() }
-        cell.configure(story: stories[indexPath.item])
-        return cell
+        switch indexPath.section {
+        case 0:
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: AddStoryCollectionViewCell.identifier,
+                for: indexPath
+            ) as? AddStoryCollectionViewCell else { return UICollectionViewCell() }
+            return cell
+        case 1:
+            guard let cell = collectionView.dequeueReusableCell(
+                withReuseIdentifier: StoriesCollectionViewCell.identifier,
+                for: indexPath
+            ) as? StoriesCollectionViewCell else { return UICollectionViewCell() }
+            cell.configure(story: stories[indexPath.item])
+            return cell
+        default: return UICollectionViewCell()
+        }
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension StoriesFeedTableViewCell: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        CGSize(width: 56, height: 76)
+        switch indexPath.section {
+        case 0: return CGSize(width: 76, height: 76)
+        case 1: return CGSize(width: 56, height: 76)
+        default: return CGSize()
+        }
     }
 }

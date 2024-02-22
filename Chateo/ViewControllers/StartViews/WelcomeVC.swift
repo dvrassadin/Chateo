@@ -9,6 +9,7 @@ import UIKit
 import SnapKit
 
 final class WelcomeVC: UIViewController {
+    
     // MARK: UI components
     private let welcomeImageView: UIImageView = {
         let imageView = UIImageView(image: UIImage.illustration)
@@ -87,6 +88,5 @@ final class WelcomeVC: UIViewController {
             make.centerX.equalToSuperview()
             make.bottom.equalTo(startButton.snp.top).offset(-25)
         }
-        
     }
 }

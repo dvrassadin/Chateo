@@ -37,6 +37,7 @@
 		51E3BE3D2B870B0100B79414 /* CustomSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */; };
 		51E3BE3F2B87252500B79414 /* StoriesFeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE3E2B87252500B79414 /* StoriesFeedTableViewCell.swift */; };
 		51E3BE412B8726C500B79414 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE402B8726C500B79414 /* StoriesCollectionViewCell.swift */; };
+		51E3BE432B8756D500B79414 /* AddStoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E3BE422B8756D500B79414 /* AddStoryCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		51E3BE3C2B870B0100B79414 /* CustomSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSearchBar.swift; sourceTree = "<group>"; };
 		51E3BE3E2B87252500B79414 /* StoriesFeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesFeedTableViewCell.swift; sourceTree = "<group>"; };
 		51E3BE402B8726C500B79414 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		51E3BE422B8756D500B79414 /* AddStoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStoryCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 				51E3BE322B86457800B79414 /* CellPhotoFrame.swift */,
 				51E3BE362B86EAFE00B79414 /* CellPhotoImageView.swift */,
 				51E3BE382B86EF3D00B79414 /* CellIsOnlineIndicator.swift */,
+				51E3BE422B8756D500B79414 /* AddStoryCollectionViewCell.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51E3BE432B8756D500B79414 /* AddStoryCollectionViewCell.swift in Sources */,
 				51E3BE022B84EB1400B79414 /* ContactTableViewCell.swift in Sources */,
 				51E3BE3B2B8709FA00B79414 /* ChatsTableViewCell.swift in Sources */,
 				51E3BDF92B84AE5600B79414 /* User.swift in Sources */,

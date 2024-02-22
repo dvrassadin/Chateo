@@ -43,18 +43,12 @@ final class ContactTableViewCell: UITableViewCell {
         photoFrame.snp.makeConstraints { make in
             make.centerY.equalToSuperview()
             make.leading.equalToSuperview().offset(20)
-//            make.width.equalTo(56)
-//            make.height.equalTo(photoFrame.snp.width)
             make.size.equalTo(56)
         }
         
         photoImageView.snp.makeConstraints { make in
-//            make.centerY.equalTo(photoFrame.snp.centerY)
-//            make.centerX.equalTo(photoFrame.snp.centerX)
             make.center.equalTo(photoFrame.snp.center)
             make.size.equalTo(48)
-//            make.width.equalTo(48)
-//            make.height.equalTo(48)
         }
         
         textStackView.snp.makeConstraints { make in
@@ -67,8 +61,6 @@ final class ContactTableViewCell: UITableViewCell {
         }
         
         isOnlineIndicator.snp.makeConstraints { make in
-//            make.width.equalTo(14)
-//            make.height.equalTo(isOnlineIndicator.snp.width)
             make.size.equalTo(14)
             make.centerX.equalTo(photoImageView.snp.trailing).offset(-4)
             make.centerY.equalTo(photoImageView.snp.top).offset(4)

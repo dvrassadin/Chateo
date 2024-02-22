@@ -17,7 +17,7 @@ struct Chat {
         self.fromUser = fromUser
         self.text = text
         self.time = time
-        numberOfUnreadMessages = UInt.random(in: 0...3)
+        numberOfUnreadMessages = UInt.random(in: 0...2)
     }
 }
 
