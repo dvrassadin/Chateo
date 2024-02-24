@@ -56,12 +56,14 @@ final class CodeVC: UIViewController {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        otcTextField.checkCodeDelegate = self
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        otcTextField.becomeFirstResponder()
     }
     
     // MARK: Setup UI
@@ -102,6 +104,7 @@ final class CodeVC: UIViewController {
     }
 }
 
+// MARK: - OneTimeCodeTextFieldDelegate
 extension CodeVC: OneTimeCodeTextFieldDelegate {
     func check(code: String) {
         if code.count == 4 {

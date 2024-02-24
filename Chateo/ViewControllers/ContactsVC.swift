@@ -34,7 +34,7 @@ final class ContactsVC: UIViewController {
         tabBarController?.navigationItem.rightBarButtonItems?.removeAll()
     }
     
-    // MARK: SetupUI
+    // MARK: Setup UI
     private func setupUI() {
         view.backgroundColor = .systemBackground
         view.addSubview(tableView)

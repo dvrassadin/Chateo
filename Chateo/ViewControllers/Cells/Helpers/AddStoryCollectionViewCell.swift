@@ -42,6 +42,11 @@ final class AddStoryCollectionViewCell: UICollectionViewCell {
         setupUI()
     }
     
+    // MARK: Navogation
+    @objc private func addStory() {
+        print("Add story button was tapped.")
+    }
+    
     // MARK: Setup UI
     private func setupUI() {
         contentView.addSubview(addStoryButton)
@@ -67,9 +72,5 @@ final class AddStoryCollectionViewCell: UICollectionViewCell {
             make.horizontalEdges.equalTo(addStoryButton)
             make.bottom.equalToSuperview()
         }
-    }
-    
-    @objc private func addStory() {
-        print("Add story button was tapped.")
     }
 }

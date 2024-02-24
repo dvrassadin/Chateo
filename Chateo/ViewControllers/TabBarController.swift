@@ -15,7 +15,7 @@ final class TabBarController: UITabBarController {
         setupUI()
     }
     
-    // MARK: SetupUI
+    // MARK: Setup UI
     private func setupUI() {
         setupTabBar()
         navigationItem.hidesBackButton = true

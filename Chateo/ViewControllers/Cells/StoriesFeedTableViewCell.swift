@@ -14,9 +14,11 @@ final class StoriesFeedTableViewCell: UITableViewCell {
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        return UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
     }()
-    private let stories = User.users
+    private var stories = [User]()
     
     // MARK: Lifecycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -40,7 +42,6 @@ final class StoriesFeedTableViewCell: UITableViewCell {
             AddStoryCollectionViewCell.self,
             forCellWithReuseIdentifier: AddStoryCollectionViewCell.identifier
         )
-        collectionView.showsHorizontalScrollIndicator = false
         setupUI()
     }
     
@@ -58,6 +59,11 @@ final class StoriesFeedTableViewCell: UITableViewCell {
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
         }
+    }
+    
+    func configure(stories: [User]) {
+        self.stories = stories
+        collectionView.reloadData()
     }
 }
 

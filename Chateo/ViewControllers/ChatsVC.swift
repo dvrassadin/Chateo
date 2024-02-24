@@ -22,16 +22,7 @@ final class ChatsVC: UIViewController {
     // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(
-            ChatsTableViewCell.self,
-            forCellReuseIdentifier: ChatsTableViewCell.identifier
-        )
-        tableView.register(
-            StoriesFeedTableViewCell.self,
-            forCellReuseIdentifier: StoriesFeedTableViewCell.identifier
-        )
+        setupTableView()
         setupUI()
     }
     
@@ -52,6 +43,19 @@ final class ChatsVC: UIViewController {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+    }
+    
+    private func setupTableView() {
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(
+            ChatsTableViewCell.self,
+            forCellReuseIdentifier: ChatsTableViewCell.identifier
+        )
+        tableView.register(
+            StoriesFeedTableViewCell.self,
+            forCellReuseIdentifier: StoriesFeedTableViewCell.identifier
+        )
     }
     
     private func createBarButtonItems() -> [UIBarButtonItem] {
@@ -86,6 +90,9 @@ extension ChatsVC: UITableViewDataSource {
                 withIdentifier: StoriesFeedTableViewCell.identifier,
                 for: indexPath
             ) as? StoriesFeedTableViewCell else { return UITableViewCell() }
+            
+            cell.configure(stories: stories)
+            
             return cell
         case 1:
             guard let cell = tableView.dequeueReusableCell(

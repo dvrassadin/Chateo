@@ -12,16 +12,16 @@ final class CustomSearchBar: UISearchBar {
     // MARK: Lifecycle
     override init(frame: CGRect = CGRect()) {
         super.init(frame: frame)
-        setupUI()
+        setup()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupUI()
+        setup()
     }
     
-    // MARK: SetupUI
-    private func setupUI() {
+    // MARK: Setup
+    private func setup() {
         sizeToFit()
         searchBarStyle = .minimal
         placeholder = String(localized: "Search")

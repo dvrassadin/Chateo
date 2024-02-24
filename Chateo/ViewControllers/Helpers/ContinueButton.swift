@@ -12,16 +12,16 @@ final class ContinueButton: UIButton {
     // MARK: Lifecycle
     init(title: String) {
         super.init(frame: CGRect())
-        configure(title: title)
+        setup(title: title)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        configure(title: "")
+        setup(title: "")
     }
     
     // MARK: Setup
-    private func configure(title: String) {
+    private func setup(title: String) {
         configuration = .filled()
         var attributedTitle = AttributedString(title)
         attributedTitle.font = UIFont(name: "MulishRoman-SemiBold", size: 16)

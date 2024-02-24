@@ -1,5 +1,5 @@
 //
-//  Message.swift
+//  Chat.swift
 //  Chateo
 //
 //  Created by Daniil Rassadin on 20/2/24.
